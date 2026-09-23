@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { toTitleCase, addNumbers } from "./index.js";
+import { addNumbers, toTitleCase } from "./index.js";
 
 describe("toTitleCase", () => {
   it("capitalizes the first letter of every word", () => {
