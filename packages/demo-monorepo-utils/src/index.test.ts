@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { toTitleCase } from "./index.js";
+import { toTitleCase, addNumbers } from "./index.js";
 
 describe("toTitleCase", () => {
   it("capitalizes the first letter of every word", () => {
@@ -16,5 +16,11 @@ describe("toTitleCase", () => {
 
   it("trims leading and trailing spaces", () => {
     expect(toTitleCase("  hello  world  ")).toBe("Hello World");
+  });
+});
+
+describe("addNumbers", () => {
+  it("adds two numbers", () => {
+    expect(addNumbers(1,2)).toBe(3);
   });
 });
