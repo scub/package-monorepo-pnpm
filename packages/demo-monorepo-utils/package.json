@@ -1,6 +1,6 @@
 {
   "name": "@dancingyetis/demo-monorepo-utils",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Tiny demo utility that title-cases a string. Independent of every other package in this workspace.",
   "type": "module",
   "license": "MIT",
@@ -8,7 +8,9 @@
     "node": ">=20"
   },
   "sideEffects": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
