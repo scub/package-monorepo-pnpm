@@ -56,7 +56,7 @@ importers:
 
   packages/demo-monorepo-cli:
     dependencies:
-      demo-monorepo-core:
+      '@dancingyetis/demo-monorepo-core':
         specifier: workspace:*
         version: link:../demo-monorepo-core
 
