@@ -1,0 +1,39 @@
+{
+  "name": "package-monorepo-pnpm-demo",
+  "version": "0.0.0",
+  "description": "Runnable demo of pnpm workspaces and CI-driven, independently-versioned publishing to npmjs via GitHub Actions and semantic-release.",
+  "private": true,
+  "license": "MIT",
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=24.15"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "clean": "pnpm -r run clean",
+    "ci": "pnpm run ci:lint && pnpm run ci:build && pnpm run ci:typecheck && pnpm run ci:test",
+    "ci:lint": "biome check .",
+    "ci:typecheck": "pnpm -r run typecheck",
+    "ci:build": "pnpm -r run build",
+    "ci:test": "pnpm -r run test",
+    "lint:commits": "commitlint --from origin/main --to HEAD --verbose",
+    "release": "multi-semantic-release --deps.bump=override --deps.release=patch"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
+    "@semantic-release/changelog": "^7.0.0",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^11.0.1",
+    "@semantic-release/github": "^12.0.10",
+    "@semantic-release/npm": "^13.2.0",
+    "@semantic-release/release-notes-generator": "^14.1.1",
+    "@types/node": "^22.10.5",
+    "husky": "^9.1.7",
+    "multi-semantic-release": "^3.1.0",
+    "semantic-release": "^25.0.9",
+    "typescript": "^5.7.3",
+    "vitest": "^1.6.0"
+  }
+}
