@@ -1,4 +1,4 @@
-# pnpm Monorepo + GitHub Actions + npmjs Demo (abridged)
+# pnpm Monorepo + GitHub Actions + npmjs Demo
 
 Demo of pnpm workspaces + CI-driven npmjs publishing through GitHub Actions,
 using semantic-release with multi-semantic-release to let each package
