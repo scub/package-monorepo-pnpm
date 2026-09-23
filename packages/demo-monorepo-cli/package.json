@@ -1,6 +1,6 @@
 {
   "name": "@dancingyetis/demo-monorepo-cli",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Tiny demo CLI that greets by name, built on demo-monorepo-core.",
   "type": "module",
   "license": "MIT",
@@ -8,7 +8,9 @@
     "node": ">=20"
   },
   "sideEffects": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "bin": {
     "demo-greet": "./dist/cli.js"
   },
@@ -20,6 +22,6 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@dancingyetis/demo-monorepo-core": "workspace:*"
+    "@dancingyetis/demo-monorepo-core": "1.0.0"
   }
 }
